@@ -40,8 +40,8 @@ st.markdown(f"""
     </style>
 
     <div style="position: relative; text-align: center;">
-        <img src="data:image/png;base64,{bg_img}" style="width: 100%; border-radius: 10px;" />
-        <div style="position: absolute; top: 70%; left: 50%;" class="floating-btn">
+        <img src="data:image/png;base64,{bg_img}" style="width: 100vw; height: 100vh; object-fit: cover;" />
+        <div style="position: absolute; top: 75%; left: 50%;" class="floating-btn">
             <form action="">
                 <button class="btn">Buka Undangan</button>
             </form>
