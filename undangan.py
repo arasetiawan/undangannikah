@@ -9,7 +9,7 @@ def get_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-bg_img = get_base64("assets/background.png")
+bg_img = get_base64("background.png")
 
 # Tambahkan CSS untuk background & tombol tengah
 st.markdown(f"""
