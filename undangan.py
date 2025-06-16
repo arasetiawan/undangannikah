@@ -11,9 +11,18 @@ bg_img = get_base64("background.png")
 
 st.markdown(f"""
     <style>
-    .main .block-container {{
-        padding-left: 0rem;
-        padding-right: 0rem;
+    /* Hapus padding dan margin global */
+    html, body, .main .block-container {{
+        padding: 0 !important;
+        margin: 0 !important;
+    }}
+
+    /* Buat gambar benar-benar fullscreen */
+    .fullscreen-img {{
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
     }}
 
     @keyframes floating {{
@@ -44,8 +53,8 @@ st.markdown(f"""
     }}
     </style>
 
-    <div style="position: relative; text-align: center;">
-        <img src="data:image/png;base64,{bg_img}" style="width: 100vw; height: 100vh; object-fit: cover; display: block; margin: 0;" />
+    <div style="position: relative;">
+        <img src="data:image/png;base64,{bg_img}" class="fullscreen-img" />
         <div style="position: absolute; top: 75%; left: 50%;" class="floating-btn">
             <form action="">
                 <button class="btn">Buka Undangan</button>
@@ -53,3 +62,4 @@ st.markdown(f"""
         </div>
     </div>
 """, unsafe_allow_html=True)
+
