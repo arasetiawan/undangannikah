@@ -1,7 +1,2 @@
-numpy
-pandas
 streamlit
-pip
-scikit-learn
-sklearn
-gzip
+python
