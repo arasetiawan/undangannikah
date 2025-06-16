@@ -11,6 +11,12 @@ bg_img = get_base64("background.png")
 
 st.markdown(f"""
     <style>
+    /* Hilangkan padding Streamlit default di kiri-kanan */
+    .main .block-container {{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }}
+
     @keyframes floating {{
         0% {{ transform: translate(-50%, -50%) translateY(0); }}
         50% {{ transform: translate(-50%, -50%) translateY(-10px); }}
@@ -40,7 +46,7 @@ st.markdown(f"""
     </style>
 
     <div style="position: relative; text-align: center;">
-        <img src="data:image/png;base64,{bg_img}" style="width: 100vw; height: 100vh; object-fit: cover;" />
+        <img src="data:image/png;base64,{bg_img}" style="width: 100vw; height: 100vh; object-fit: cover; display: block; margin: 0;" />
         <div style="position: absolute; top: 75%; left: 50%;" class="floating-btn">
             <form action="">
                 <button class="btn">Buka Undangan</button>
