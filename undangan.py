@@ -11,7 +11,6 @@ bg_img = get_base64("background.png")
 
 st.markdown(f"""
     <style>
-    /* Hilangkan padding Streamlit default di kiri-kanan */
     .main .block-container {{
         padding-left: 0rem;
         padding-right: 0rem;
