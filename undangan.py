@@ -11,18 +11,26 @@ bg_img = get_base64("background.png")
 
 st.markdown(f"""
     <style>
-    /* Hapus padding dan margin global */
-    html, body, .main .block-container {{
-        padding: 0 !important;
+    /* Reset margin dan padding untuk semua level */
+    html, body {{
         margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden;
     }}
 
-    /* Buat gambar benar-benar fullscreen */
+    .main .block-container {{
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+    }}
+
     .fullscreen-img {{
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         object-fit: cover;
         display: block;
+        margin: 0;
+        padding: 0;
     }}
 
     @keyframes floating {{
@@ -53,7 +61,7 @@ st.markdown(f"""
     }}
     </style>
 
-    <div style="position: relative;">
+    <div style="position: relative; width: 100vw; height: 100vh; overflow: hidden;">
         <img src="data:image/png;base64,{bg_img}" class="fullscreen-img" />
         <div style="position: absolute; top: 75%; left: 50%;" class="floating-btn">
             <form action="">
