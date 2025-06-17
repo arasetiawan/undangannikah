@@ -28,7 +28,7 @@ st.markdown(f"""
         color: white;
         padding: 10px 24px;
         border-radius: 8px;
-        font-size: 18px;
+        font-size: 13px;
         border: none;
         cursor: pointer;
         transition: all 0.3s ease;
