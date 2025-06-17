@@ -13,14 +13,14 @@ bg_img = get_base64("background.png")
 # Tampilkan gambar dengan tombol di atasnya
 st.markdown(f"""
     <style>
-    @keyframes scaleIn {{
-        0%   {{ transform: translate(-50%, -50%) scale(0); opacity: 0; }}
-        60%  {{ transform: translate(-50%, -50%) scale(1.05); opacity: 1; }}
-        100% {{ transform: translate(-50%, -50%) scale(1); }}
+    @keyframes floating {{
+        0%   {{ transform: translate(-50%, -50%) translateY(0); }}
+        50%  {{ transform: translate(-50%, -50%) translateY(-10px); }}
+        100% {{ transform: translate(-50%, -50%) translateY(0); }}
     }}
 
-    .scale-in {{
-        animation: scaleIn 0.8s ease-out forwards;
+    .animated-btn {{
+        animation: floating 2.5s ease-in-out infinite;
     }}
 
     .btn {{
@@ -31,7 +31,7 @@ st.markdown(f"""
         font-size: 18px;
         border: none;
         cursor: pointer;
-        transition: 0.3s ease;
+        transition: all 0.3s ease;
     }}
 
     .btn:hover {{
@@ -43,7 +43,7 @@ st.markdown(f"""
 
     <div style="position: relative; text-align: center;">
         <img src="data:image/png;base64,{bg_img}" style="width: 100%; border-radius: 10px;" />
-        <div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);" class="scale-in">
+        <div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);" class="animated-btn">
             <form action="">
                 <button class="btn">Buka Undangan</button>
             </form>
