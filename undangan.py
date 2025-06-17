@@ -47,25 +47,8 @@ st.markdown(f"""
         100% {{ transform: translate(-50%, -50%) translateY(0); }}
     }}
 
-    @keyframes fadeInTop {{
-        0%   {{ opacity: 0; transform: translateY(-50px); }}
-        100% {{ opacity: 1; transform: translateY(0); }}
-    }}
-
     .animated-btn {{
         animation: floating 2.5s ease-in-out infinite;
-    }}
-
-    .bride-groom {{
-        font-family: 'Georgia', serif;
-        font-size: 28px;
-        color: white;
-        text-shadow: 1px 1px 4px black;
-        animation: fadeInTop 1.5s ease-out forwards;
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        transform: translateX(-50%);
     }}
 
     .btn {{
@@ -86,19 +69,12 @@ st.markdown(f"""
     }}
     </style>
 
-    <!-- Gambar Latar -->
     <img src="data:image/png;base64,{bg_img}" class="fullscreen-img" />
-
-    <!-- Nama Pengantin -->
-    <div class="bride-groom">
-        Ara & Pasangan
-    </div>
-
-    <!-- Tombol -->
-    <div class="animated-btn" style="position: absolute; top: 75%; left: 50%; transform: translate(-50%, -50%);">
+    <div class="animated-btn" style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
         <form action="">
             <button class="btn">Buka Undangan</button>
         </form>
     </div>
 """, unsafe_allow_html=True)
+
 
